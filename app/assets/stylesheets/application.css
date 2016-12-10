@@ -17,3 +17,15 @@
     margin-right: 20px;
     display: inline-block;
 }
+
+.img-align{
+	text-align: center;
+	margin: 10px;
+}
+
+.rubygirl{
+	margin: 0 auto;
+	height: 300px;
+	width: auto;
+	text-align: center;
+}

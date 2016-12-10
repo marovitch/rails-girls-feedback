@@ -14,6 +14,9 @@
       </div>
     </div>
   <% end %>
+  <div class="img-align">
+    <%= image_tag 'garotinha.png', class: "rubygirl" %>
+  </div>
 
   <%= f.input :resposta_palestra, as: :radio_buttons, label: 'O que você achou das palestras?', collection: (1..5).to_a, item_wrapper_class: 'inline-radio' %>
   <%= f.input :resposta_coach, as: :radio_buttons, label: 'O que você achou dos coaches?', collection: (1..5).to_a, item_wrapper_class: 'inline-radio' %>
