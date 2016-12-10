@@ -1,4 +1,4 @@
-Rails.application.routes.draw do   
-  resources :answers
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+Rails.application.routes.draw do
+  resources :answers, except: [:show, :delete, :update]
+  root 'answers#new'
 end
