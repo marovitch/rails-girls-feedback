@@ -1,0 +1,30 @@
+<%= simple_form_for @answer do |f| %>
+
+  <% if @answer.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @answer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <%= f.input :resposta_palestra, as: :radio_buttons, collection: (1..5).to_a %>
+  <%= f.input :resposta_coach, as: :radio_buttons, collection: (1..5).to_a %>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                answers_path, :class => 'btn btn-default' %>
+
+    </div>
+  </div>
+
+<% end %>
